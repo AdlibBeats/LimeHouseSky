@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LimeHouseSky.DbContexts;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,8 +30,13 @@ namespace LimeHouseSky
         /// </summary>
         public App()
         {
-            this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            InitializeComponent();
+            Suspending += OnSuspending;
+
+            using (var db = new MobileContext())
+            {
+                db.Database.Migrate();
+            }
         }
 
         /// <summary>

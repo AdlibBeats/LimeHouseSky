@@ -1,0 +1,50 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Default">
+            <SolidColorBrush x:Key="Theme.SkyButton.Normal.Background" Color="#FFAE2B30"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Normal.BorderBrush" Color="#FFAE2B30"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Normal.Foreground" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.PointerOver.Background" Color="#FFC36064"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.PointerOver.BorderBrush" Color="#FFC36064"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.PointerOver.Foreground" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Pressed.Background" Color="#FF740000"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Pressed.BorderBrush" Color="#FF740000"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Pressed.Foreground" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Disabled.Background" Color="#FF383D4B"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Disabled.BorderBrush" Color="#FF383D4B"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Disabled.Foreground" Color="#FF82899C"/>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="HightContrast">
+            <SolidColorBrush x:Key="Theme.SkyButton.Normal.Background" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Normal.BorderBrush" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Normal.Foreground" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.PointerOver.Background" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.PointerOver.BorderBrush" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.PointerOver.Foreground" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Pressed.Background" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Pressed.BorderBrush" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Pressed.Foreground" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Disabled.Background" Color="#FF383D4B"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Disabled.BorderBrush" Color="#FF383D4B"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Disabled.Foreground" Color="#FF82899C"/>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Light">
+            <SolidColorBrush x:Key="Theme.SkyButton.Normal.Background" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Normal.BorderBrush" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Normal.Foreground" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.PointerOver.Background" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.PointerOver.BorderBrush" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.PointerOver.Foreground" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Pressed.Background" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Pressed.BorderBrush" Color="#FFED1C24"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Pressed.Foreground" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Disabled.Background" Color="#FF383D4B"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Disabled.BorderBrush" Color="#FF383D4B"/>
+            <SolidColorBrush x:Key="Theme.SkyButton.Disabled.Foreground" Color="#FF82899C"/>
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
+</ResourceDictionary>
