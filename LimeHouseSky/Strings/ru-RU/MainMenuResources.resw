@@ -117,10 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClickMe.Text" xml:space="preserve">
-    <value>Нажми меня</value>
+  <data name="Account" xml:space="preserve">
+    <value>Аккаунт</value>
   </data>
-  <data name="Hello world" xml:space="preserve">
-    <value>Привет мир</value>
+  <data name="Acquaintances" xml:space="preserve">
+    <value>Знакомства</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="Sympathies" xml:space="preserve">
+    <value>Симпатии</value>
   </data>
 </root>

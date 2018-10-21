@@ -119,6 +119,8 @@
   </resheader>
   <data name="ClickMe.Text" xml:space="preserve">
     <value>Click me</value>
-    <comment>OnClickButton</comment>
+  </data>
+  <data name="Hello world" xml:space="preserve">
+    <value>Hello world</value>
   </data>
 </root>

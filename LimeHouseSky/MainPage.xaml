@@ -6,11 +6,16 @@
     xmlns:controls="using:LimeHouseSky.UI.Controls.Base"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:LimeHouseSky.ViewModels"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Loaded="OnLoaded">
 
-    <Grid Background="White">
+    <Page.Resources>
+        <viewModels:MainMenuViewModel x:Key="MainMenuViewModel"></viewModels:MainMenuViewModel>
+    </Page.Resources>
+
+    <Grid Background="White" DataContext="{StaticResource MainMenuViewModel}">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -25,7 +30,7 @@
             VerticalAlignment="Center"
             IsCornerRadiusVisible="True">
             <controls:BaseSkyButton.Content>
-                <TextBlock x:Uid="ClickMe"/>
+                <TextBlock Text="{Binding MainMenuModel.SomeText}"/>
             </controls:BaseSkyButton.Content>
         </controls:BaseSkyButton>
         <TextBox
