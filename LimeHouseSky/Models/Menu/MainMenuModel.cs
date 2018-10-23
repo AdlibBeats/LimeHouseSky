@@ -1,5 +1,6 @@
 ﻿using LimeHouseSky.Extensions;
 using LimeHouseSky.Models.Base;
+using LimeHouseSky.Models.Message;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -28,6 +29,13 @@ namespace LimeHouseSky.Models.Menu
         {
             get => _someText;
             set => Set(ref _someText, value);
+        }
+
+        private ObservableCollection<MessageModel> _messages;
+        public ObservableCollection<MessageModel> Messages
+        {
+            get => _messages;
+            set => Set(ref _messages, value);
         }
     }
 }

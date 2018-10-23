@@ -1,4 +1,5 @@
 ﻿using LimeHouseSky.Db.Local.Context;
+using LimeHouseSky.Pages.Main;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -33,10 +34,10 @@ namespace LimeHouseSky
             InitializeComponent();
             Suspending += OnSuspending;
 
-            using (var db = new MobileContext())
-            {
-                db.Database.Migrate();
-            }
+            //using (var db = new MobileContext())
+            //{
+            //    db.Database.Migrate();
+            //}
         }
 
         /// <summary>
@@ -73,7 +74,7 @@ namespace LimeHouseSky
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(MainMenuPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();

@@ -76,6 +76,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -97,12 +98,29 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Account\AccountModel.cs" />
     <Compile Include="Models\Base\BaseModel.cs" />
     <Compile Include="Models\Menu\MainMenuItemModel.cs" />
     <Compile Include="Models\Menu\MainMenuModel.cs" />
+    <Compile Include="Models\Message\MessageModel.cs" />
+    <Compile Include="Models\Photo\PhotoItemModel.cs" />
+    <Compile Include="Models\Photo\PhotoModel.cs" />
+    <Compile Include="Pages\Account\AccountPage.xaml.cs">
+      <DependentUpon>AccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Acquaintances\AcquaintancesPage.xaml.cs">
+      <DependentUpon>AcquaintancesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\IPage.cs" />
+    <Compile Include="Pages\Main\MainMenuPage.xaml.cs">
+      <DependentUpon>MainMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Settings\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sympathies\SympathiesPage.xaml.cs">
+      <DependentUpon>SympathiesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strings\PathResources.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
@@ -133,10 +151,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">
@@ -151,9 +165,7 @@
       <Version>6.1.9</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\LimeHouseSky.Db.Local\LimeHouseSky.Db.Local.csproj">
       <Project>{7db66f3a-277f-4e24-bee1-e26c70517569}</Project>
@@ -163,6 +175,28 @@
       <Project>{164517d2-6165-4a40-80a9-a4e6b6f9ebc4}</Project>
       <Name>LimeHouseSky.UI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Pages\Account\AccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Acquaintances\AcquaintancesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Main\MainMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Settings\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Sympathies\SympathiesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
