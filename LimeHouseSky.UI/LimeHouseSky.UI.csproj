@@ -110,6 +110,7 @@
   <ItemGroup>
     <Compile Include="Controls\Base\BaseSkyButton.cs" />
     <Compile Include="Controls\Base\BaseSkyStates.cs" />
+    <Compile Include="Converters\VisibilityConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\LimeHouseSky.UI.rd.xml" />
   </ItemGroup>
@@ -131,6 +132,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Converters\Converters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\Thicknesses.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,7 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Animations\Base\" />
-    <Folder Include="Converters\" />
     <Folder Include="Extensions\" />
     <Folder Include="Fonts\" />
   </ItemGroup>

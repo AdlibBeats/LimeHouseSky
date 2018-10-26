@@ -36,42 +36,48 @@ namespace LimeHouseSky.ViewModels
                         MainPhoto = new PhotoItemModel { PhotoUrl = "https://img1.badfon.ru/original/1600x1200/8/78/portret-vzglyad-makro.jpg" },
                         FirstName = "Mariana",
                         LastMessage = "Привет, что делаешь",
-                        LastDateMessage = DateTime.Now
+                        LastDateMessage = DateTime.Now,
+                        MessageType = MessageType.FromRead
                     },
                     new MessageModel
                     {
                         MainPhoto = new PhotoItemModel { PhotoUrl = "https://wallbox.ru/resize/1680x1050/wallpapers/main/201546/33dd38ab305ee1e.jpg" },
                         FirstName = "Карина123 esasd 23123213 dsdasdsadd",
                         LastMessage = "Ты как всегда не успеваешь",
-                        LastDateMessage = DateTime.Now
+                        LastDateMessage = DateTime.Now,
+                        MessageType = MessageType.FromUnread
                     },
                     new MessageModel
                     {
                         MainPhoto = new PhotoItemModel { PhotoUrl = "https://mota.ru/upload/wallpapers/source/2016/02/28/13/05/47636/mota.ru_20160228063.jpg" },
                         FirstName = "Валя",
                         LastMessage = "Почему ты переехала, ведь теперь тебе придётся далеко ехать на учёбу",
-                        LastDateMessage = DateTime.Now
+                        LastDateMessage = DateTime.Now,
+                        MessageType = MessageType.To
                     },
                     new MessageModel
                     {
                         MainPhoto = new PhotoItemModel { PhotoUrl = "https://img1.badfon.ru/original/1600x1200/8/78/portret-vzglyad-makro.jpg" },
                         FirstName = "Елена",
                         LastMessage = "Привет, что делаешь",
-                        LastDateMessage = DateTime.Now
+                        LastDateMessage = DateTime.Now,
+                        MessageType = MessageType.FromRead
                     },
                     new MessageModel
                     {
                         MainPhoto = new PhotoItemModel { PhotoUrl = "https://wallbox.ru/resize/1680x1050/wallpapers/main/201546/33dd38ab305ee1e.jpg" },
                         FirstName = "Оля",
                         LastMessage = "Ты как всегда не успеваешь",
-                        LastDateMessage = DateTime.Now
+                        LastDateMessage = DateTime.Now,
+                        MessageType = MessageType.FromUnread
                     },
                     new MessageModel
                     {
                         MainPhoto = new PhotoItemModel { PhotoUrl = "https://mota.ru/upload/wallpapers/source/2016/02/28/13/05/47636/mota.ru_20160228063.jpg" },
                         FirstName = "Эля",
                         LastMessage = "Почему ты переехала, ведь теперь тебе придётся далеко ехать на учёбу",
-                        LastDateMessage = DateTime.Now
+                        LastDateMessage = DateTime.Now,
+                        MessageType = MessageType.To
                     }
                 }
             };

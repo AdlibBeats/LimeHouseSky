@@ -123,8 +123,14 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strings\PathResources.cs" />
+    <Compile Include="Triggers\Base\BaseTrigger.cs" />
+    <Compile Include="Triggers\Double\And\DoubleBooleanTrigger.cs" />
+    <Compile Include="Triggers\Double\Or\DoubleBooleanTrigger.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainMenuViewModel.cs" />
+    <Compile Include="Views\MessageItemView.xaml.cs">
+      <DependentUpon>MessageItemView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -137,6 +143,44 @@
     <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AppIcons\png\alarm-clock.png" />
+    <Content Include="Assets\AppIcons\png\camera.png" />
+    <Content Include="Assets\AppIcons\png\cheers.png" />
+    <Content Include="Assets\AppIcons\png\clock.png" />
+    <Content Include="Assets\AppIcons\png\close.png" />
+    <Content Include="Assets\AppIcons\png\cocktail.png" />
+    <Content Include="Assets\AppIcons\png\coin-stack.png" />
+    <Content Include="Assets\AppIcons\png\conversation-speech-bubbles-.png" />
+    <Content Include="Assets\AppIcons\png\dice.png" />
+    <Content Include="Assets\AppIcons\png\garbage.png" />
+    <Content Include="Assets\AppIcons\png\giftbox.png" />
+    <Content Include="Assets\AppIcons\png\heart-sketch.png" />
+    <Content Include="Assets\AppIcons\png\heartbeat.png" />
+    <Content Include="Assets\AppIcons\png\hot-coffee.png" />
+    <Content Include="Assets\AppIcons\png\king-crown.png" />
+    <Content Include="Assets\AppIcons\png\left-curve-arrow.png" />
+    <Content Include="Assets\AppIcons\png\like.png" />
+    <Content Include="Assets\AppIcons\png\line-menu.png" />
+    <Content Include="Assets\AppIcons\png\login.png" />
+    <Content Include="Assets\AppIcons\png\logout.png" />
+    <Content Include="Assets\AppIcons\png\no-photo.png" />
+    <Content Include="Assets\AppIcons\png\penguin-128.png" />
+    <Content Include="Assets\AppIcons\png\penguin-24.png" />
+    <Content Include="Assets\AppIcons\png\penguin-256.png" />
+    <Content Include="Assets\AppIcons\png\penguin-32.png" />
+    <Content Include="Assets\AppIcons\png\penguin-512.png" />
+    <Content Include="Assets\AppIcons\png\penguin-64.png" />
+    <Content Include="Assets\AppIcons\png\refresh-arrow.png" />
+    <Content Include="Assets\AppIcons\png\settings-work-tool.png" />
+    <Content Include="Assets\AppIcons\png\settings.png" />
+    <Content Include="Assets\AppIcons\png\shopping-cart.png" />
+    <Content Include="Assets\AppIcons\png\shopping-purse.png" />
+    <Content Include="Assets\AppIcons\png\sign-in.png" />
+    <Content Include="Assets\AppIcons\png\speech-bubble-with-a-heart.png" />
+    <Content Include="Assets\AppIcons\png\speech-bubbles.png" />
+    <Content Include="Assets\AppIcons\png\time.png" />
+    <Content Include="Assets\AppIcons\png\user.png" />
+    <Content Include="Assets\AppIcons\svg\penguin.svg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -194,6 +238,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Sympathies\SympathiesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MessageItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -135,6 +135,7 @@
             </Style>
 
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///LimeHouseSky.UI/Converters/Converters.xaml"/>
                 <ResourceDictionary Source="ms-appx:///LimeHouseSky.UI/Controls/Controls.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

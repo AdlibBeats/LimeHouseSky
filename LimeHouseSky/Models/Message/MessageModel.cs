@@ -8,6 +8,13 @@ using System.Threading.Tasks;
 
 namespace LimeHouseSky.Models.Message
 {
+    public enum MessageType
+    {
+        FromRead,
+        FromUnread,
+        To
+    }
+
     public class MessageModel : BaseModel
     {
         private PhotoItemModel _mainPhoto;
@@ -45,6 +52,24 @@ namespace LimeHouseSky.Models.Message
         }
 
         public string LastDateMessageString => LastDateMessage.ToString("d");
-        public string LastTimeMessageString => LastDateMessage.ToString("hh':'mm");
+        public string LastTimeMessageString => LastDateMessage.ToString("HH':'mm");
+
+        private MessageType _messageType;
+        public MessageType MessageType
+        {
+            get => _messageType;
+            set
+            {
+                Set(ref _messageType, value);
+
+                OnPropertyChanged(nameof(IsMessageFromRead));
+                OnPropertyChanged(nameof(IsMessageFromUnread));
+                OnPropertyChanged(nameof(IsMessageTo));
+            }
+        }
+
+        public bool IsMessageFromRead => MessageType == MessageType.FromRead;
+        public bool IsMessageFromUnread => MessageType == MessageType.FromUnread;
+        public bool IsMessageTo => MessageType == MessageType.To;
     }
 }
