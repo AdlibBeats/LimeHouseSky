@@ -1,5 +1,6 @@
 ﻿using LimeHouseSky.Db.Local.Context;
 using LimeHouseSky.Pages.Main;
+using LimeHouseSky.Views;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -47,16 +48,16 @@ namespace LimeHouseSky
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            Frame rootFrame = Window.Current.Content as Frame;
+            MainFrame mainFrame = Window.Current.Content as MainFrame;
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
-            if (rootFrame == null)
+            if (mainFrame == null)
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
-                rootFrame = new Frame();
+                mainFrame = new MainFrame();
 
-                rootFrame.NavigationFailed += OnNavigationFailed;
+                mainFrame.RootFrame.NavigationFailed += OnNavigationFailed;
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
@@ -64,17 +65,17 @@ namespace LimeHouseSky
                 }
 
                 // Place the frame in the current Window
-                Window.Current.Content = rootFrame;
+                Window.Current.Content = mainFrame;
             }
 
             if (e.PrelaunchActivated == false)
             {
-                if (rootFrame.Content == null)
+                if (mainFrame.RootFrame.Content == null)
                 {
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(MainMenuPage), e.Arguments);
+                    mainFrame.RootFrame.Navigate(typeof(MainMenuPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
@@ -103,6 +104,11 @@ namespace LimeHouseSky
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+        private void SetDefaultSettings()
+        {
+
         }
     }
 }

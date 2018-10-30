@@ -14,6 +14,7 @@ namespace LimeHouseSky.UI.Controls.Base
     public class BaseSkyButton : ContentControl
     {
         protected Grid LocalSkyMainGrid { get; private set; }
+
         protected bool IsPressed { get; private set; }
         protected bool IsPointerOver { get; private set; }
 

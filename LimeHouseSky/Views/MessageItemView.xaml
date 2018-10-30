@@ -6,8 +6,17 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <Grid x:Name="Root" Margin="10,10,10,10">
+<!--Segoe UI-->
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Style.Setters>
+                <Setter Property="Foreground" Value="#999999"/>
+                <Setter Property="FontFamily" Value="{StaticResource SFNSDisplay}"/>
+            </Style.Setters>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot" Margin="10,10,10,10" PointerEntered="LayoutRoot_PointerEntered" PointerExited="LayoutRoot_PointerExited">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="MessageStates">
                 <VisualState>
@@ -17,6 +26,7 @@
                     <VisualState.Setters>
                         <Setter Target="messageFromIcon.Visibility" Value="Visible"/>
                         <Setter Target="lastMessageText.FontWeight" Value="Normal"/>
+                        <Setter Target="lastMessageText.Foreground" Value="#999999"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState>
@@ -25,7 +35,8 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="messageFromIcon.Visibility" Value="Visible"/>
-                        <Setter Target="lastMessageText.FontWeight" Value="Bold"/>
+                        <Setter Target="lastMessageText.FontWeight" Value="Normal"/>
+                        <Setter Target="lastMessageText.Foreground" Value="#FFFFFF"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState>
@@ -35,6 +46,7 @@
                     <VisualState.Setters>
                         <Setter Target="messageFromIcon.Visibility" Value="Collapsed"/>
                         <Setter Target="lastMessageText.FontWeight" Value="Normal"/>
+                        <Setter Target="lastMessageText.Foreground" Value="#999999"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -44,12 +56,14 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <Border
-            Grid.Column="0"
+        <Border Grid.Column="0"
+            Margin="10,0,0,0"
             Width="100"
             Height="100"
             CornerRadius="50">
             <Image
+                Width="100"
+                Height="100"
                 Stretch="UniformToFill"
                 Source="{x:Bind MessageModel.MainPhoto.PhotoUrl, Mode=OneWay}"/>
         </Border>
@@ -63,9 +77,9 @@
                 Margin="10,10,10,0" Visibility="Visible"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
-                Foreground="Black"
-                FontWeight="SemiBold"
-                FontSize="16"  TextTrimming="CharacterEllipsis"
+                FontWeight="Bold"
+                FontSize="18"
+                TextTrimming="CharacterEllipsis"
                 Text="{x:Bind MessageModel.FirstName, Mode=OneWay}"/>
             <Grid Grid.Row="1" Margin="10,0,10,10">
                 <Grid.ColumnDefinitions>
@@ -74,39 +88,37 @@
                 </Grid.ColumnDefinitions>
                 <BitmapIcon x:Name="messageFromIcon"
                     Grid.Column="0"
-                    Margin="0,0,10,0"
+                    Margin="0,0,8,-1"
                     Foreground="LightPink"
-                    Width="18"
-                    Height="18"
-                    UriSource="Assets/AppIcons/png/speech-bubble-with-a-heart.png"
+                    Width="12"
+                    Height="12"
+                    UriSource="Assets/AppIcons/png/like.png"
                     Visibility="Collapsed"/>
                 <TextBlock x:Name="lastMessageText"
                     Grid.Column="1"
                     Margin="0,0,0,0"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
-                    Foreground="Black"
-                    FontWeight="Normal"
+                    FontSize="16"
                     TextTrimming="CharacterEllipsis"
                     Text="{x:Bind MessageModel.LastMessage, Mode=OneWay}"/>
             </Grid>
         </Grid>
-        <StackPanel
-            Grid.Column="2"
-            Margin="10,25,10,0"
+        <StackPanel Grid.Column="2"
+            Margin="10,25,25,0"
             Orientation="Vertical"
             HorizontalAlignment="Right">
             <TextBlock
                 Grid.Row="0"
-                Foreground="Black"
-                FontWeight="Normal"
-                FontSize="12"
+                FontSize="15"
+                FontWeight="Light"
+                TextAlignment="Right"
                 Text="{x:Bind MessageModel.LastDateMessageString, Mode=OneWay}"/>
             <TextBlock
                 Grid.Row="1"
-                Foreground="Black"
-                FontWeight="Normal"
-                FontSize="12"
+                FontSize="15"
+                FontWeight="Light"
+                TextAlignment="Right"
                 Text="{x:Bind MessageModel.LastTimeMessageString, Mode=OneWay}"/>
         </StackPanel>
     </Grid>
